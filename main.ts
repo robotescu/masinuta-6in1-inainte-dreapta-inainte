@@ -1,0 +1,20 @@
+input.onButtonPressed(Button.A, function () {
+    RingbitCar.running_time(RingbitCar.Direction_run.forward, 3)
+    RingbitCar.steering_angle(RingbitCar.Direction_turn.right, 45)
+    RingbitCar.running_time(RingbitCar.Direction_run.forward, 2)
+})
+input.onButtonPressed(Button.AB, function () {
+    RingbitCar.running_time(RingbitCar.Direction_run.forward, 3)
+    RingbitCar.turnright()
+    basic.pause(500)
+    RingbitCar.brake()
+    RingbitCar.running_time(RingbitCar.Direction_run.forward, 2)
+})
+input.onButtonPressed(Button.B, function () {
+    RingbitCar.running_time(RingbitCar.Direction_run.forward, 3)
+    RingbitCar.freestyle(100, 50)
+    basic.pause(2000)
+    RingbitCar.brake()
+    RingbitCar.running_time(RingbitCar.Direction_run.forward, 2)
+})
+RingbitCar.init_wheel(AnalogPin.P1, AnalogPin.P2)
